@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>Payment</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body class="container">
+  <header>
+    <h1>Payment Form</h1>
+  </header>
+  <section>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form data-payment-form="form">
+          <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+          <section>
+            <h3>Contact Information</h3>
+            <fieldset>
+              <legend>Title</legend>
+              <div>
+                <label for="title_1">
+                  <input type="radio" id="title_1" name="title" value="Mr.">
+                  Mr.
+                </label>
+              </div>
+              <div>
+                <label for="title_2">
+                  <input type="radio" id="title_2" name="title" value="Mrs.">
+                  Mrs.
+                </label>
+              </div>
+              <div>
+                <label for="title_3">
+                  <input type="radio" id="title_3" name="title" value="Ms.">
+                  Ms.
+                </label>
+              </div>
+            </fieldset>
+            <div class="form-group">
+              <label for="name">Name: <strong><abbr title="required">*</abbr></strong></label>
+              <input class="form-control" type="text" id="name" name="username">
+            </div>
+            <div class="form-group">
+              <label for="mail">E-mail: <strong><abbr title="required">*</abbr></strong></label>
+              <input class="form-control" type="email" id="mail" name="usermail">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password: <strong><abbr title="required">*</abbr></strong></label>
+              <input class="form-control" type="password" id="pwd" name="password">
+            </div>
+          </section>
+          <section>
+            <h3>Payment Information</h3>
+            <div class="form-group">
+              <label for="card">Card type: </label>
+              <select id="card" class="form-control" name="usercard">
+                <option value="visa">Visa</option>
+                <option value="mc">Mastercard</option>
+                <option value="amex">American Express</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="number">Card Number: <strong><abbr title="required">*</abbr></strong></label>
+              <input class="form-control" type="tel" id="number" name="cardnumber">
+            </div>
+            <div class="form-group">
+              <label for="date">Expiration Date: <strong><abbr title="required">*</abbr></strong><em>formatted as mm/dd/yyyy</em></label>
+              <input class="form-control" type="date" id="date" name="expiration">
+            </div>
+          </section>
+          <button type="submit" class="btn btn-default">Validate Payment</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div payment-message="person"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <script src="scripts/paymentResponse.js" charset="utf-8"></script>
+  <script src="scripts/formhandler.js" charset="utf-8"></script>
+  <script src="scripts/datastore.js" charset="utf-8"></script>
+  <script src="scripts/payment.js" charset="utf-8"></script>
+  <script src="scripts/mainPayment.js" charset="utf-8"></script>
+</body>
+
+</html>
